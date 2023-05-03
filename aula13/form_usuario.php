@@ -1,3 +1,7 @@
+<?php
+    require_once "usuario/consultar_por_id.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +15,13 @@
     <hr>
     <form action="inserir.php" method="post">
         <label for="">Nome</label><br>
-        <input type="text" name="n1" id="n1"><br>
+        <input type="text" name="n1" id="n1" value="<?php echo $usuario->nome;?>"><br>
 
         <label for="">Login</label><br>
-        <input type="text" name="n2" id="n2"><br>
+        <input type="text" name="n2" id="n2" value="<?php echo $usuario->login;?>"><br>
 
         <label for="">Senha</label><br>
-        <input type="password" name="n3" id="n3"><br>
+        <input type="password" name="n3" id="n3" value="<?php echo $usuario->senha;?>"><br>
 
         <button type="submit">Cadastrar</button>
     </form>
