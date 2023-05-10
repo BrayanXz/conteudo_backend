@@ -1,5 +1,5 @@
 <?php
-require_once "../conexao.php";
+require_once "conexao.php";
 
 $nome = $_POST["n4"];
 $nome = $_POST["n1"];
