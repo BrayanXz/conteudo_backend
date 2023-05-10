@@ -17,5 +17,4 @@ $comando->bind_param("sss", $nome , $login , $senha);
 $comando->execute();
 
 }
-
-header('location: form_usuario.html');
+header('location: ../usuarios.php');

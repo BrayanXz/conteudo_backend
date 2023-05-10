@@ -12,6 +12,7 @@
 
     <h1>Usuarios</h1>
     <hr>
+    <a href="form_usuario.php" class="btn btn-success" >Inserir Novo </a>
     <table class="table">
   <thead>
     <tr>
