@@ -13,7 +13,10 @@
 <body>
    <h1>Cadastro de Usuario</h1>
     <hr>
-    <form action="inserir.php" method="post">
+    <form action="<?php echo isset($usuario) ? "usuario/atualizar.php" : "usuario/inserir.php"; ?>" method="post">
+    
+        <input type="hidden" name="idusuario" id="n1" value="<?php echo $usuario->idusuario ?? "" ;?>"><br>  
+
         <label for="">Nome</label><br>
         <input type="text" name="n1" id="n1" value="<?php echo $usuario->nome ?? "" ;?>"><br>
 

@@ -13,4 +13,4 @@ $comando->bind_param("i", $id);
 
 $comando->execute();
 
-header('location: form_usuario.html');
+header('location: ../usuarios.php');

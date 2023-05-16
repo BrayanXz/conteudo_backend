@@ -1,7 +1,7 @@
 <?php
 require_once "../conexao.php";
 
-if(isset($_POST["nome"]) && isset($_POST["login"]) && isset($_POST["senha"])){
+if(isset($_POST["n1"]) && isset($_POST["n2"]) && isset($_POST["n3"])){
 $nome = $_POST["n1"];
 $login = $_POST["n2"];
 $senha = password_hash($_POST["n3"], PASSWORD_BCRYPT);
