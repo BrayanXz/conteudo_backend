@@ -11,5 +11,4 @@ $conexao = new mysqli($host, $user, $password, $database, $port);
 
 if($conexao->connect_error){
     echo $conexao->connect_error;
-    die();
 }

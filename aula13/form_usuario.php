@@ -13,7 +13,7 @@
 <body>
    <h1>Cadastro de Usuario</h1>
     <hr>
-    <form action="<?php echo isset($usuario) ? "usuario/atualizar.php" : "usuario/inserir.php"; ?>" method="post">
+    <form action="<?php echo isset($usuario) ? "usuario/atualizar.php" : "usuario/inserir.php"; ?>" method="post" enctype="multipart/form-data">
     
         <input type="hidden" name="idusuario" id="n1" value="<?php echo $usuario->idusuario ?? "" ;?>"><br>  
 
@@ -25,6 +25,9 @@
 
         <label for="">Senha</label><br>
         <input type="password" name="n3" id="n3" value="<?php echo $usuario->senha ?? "" ;?>"><br>
+
+        <label for="">foto</label><br>
+        <input type="file" name="n4" id="n4" value="<?php echo $usuario->foto ?? "" ;?>"><br>
 
         <button type="submit">Cadastrar</button>
     </form>
