@@ -16,4 +16,4 @@ $comando->bind_param("sssi", $nome , $login , $senha , $id);
 
 $comando->execute();
 
-header('location: ../usuarios.php');
+header('location: index.php');
