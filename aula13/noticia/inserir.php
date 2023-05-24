@@ -5,17 +5,17 @@ if(isset($_POST["n1"]) && isset($_POST["n2"]) && isset($_POST["n3"])){
 
 require_once "faz_upload.php";
 
-$nome = $_POST["n1"];
-$login = $_POST["n2"];
-$senha = password_hash($_POST["n3"], PASSWORD_BCRYPT);
+$titulo = $_POST["n1"];
+$materia = $_POST["n2"];
+$categoria = $_POST["n3"];
 
-$sql = "INSERT INTO `usuario` (`nome`, `login`, `senha`, `foto`) VALUES (?, ?, ?, ?);";
+$sql = "INSERT INTO `noticia` (`titulo`, `materia`, `categoria`, `foto`) VALUES (?, ?, ?, ?);";
 
 echo $sql;
 
 $comando = $conexao->prepare($sql);
 
-$comando->bind_param("ssss", $nome , $login , $senha, $nome_foto); 
+$comando->bind_param("ssss", $titulo , $materia , $categoria, $nome_foto); 
 
 $comando->execute();
 

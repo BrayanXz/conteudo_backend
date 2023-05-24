@@ -1,35 +1,30 @@
 <?php
     require_once "consultar_por_id.php";
+    require_once "../template/cabeçalho.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>Cadastro de Noticias</h1>
+<div class="container">
+  
+    <h1>Cadastro de Noticias</h1>
     <hr>
     <form action="<?php echo isset($noticia) ? "atualizar.php" : "inserir.php"; ?>" method="post" enctype="multipart/form-data">
     
         <input type="hidden" name="idnoticia" id="n1" value="<?php echo $noticia->idnoticia ?? "" ;?>"><br>  
 
-        <label for="">Titulo</label><br>
-        <input type="text" name="n1" id="n1" value="<?php echo $noticia->titulo ?? "" ;?>"><br>
+        <label class="form-label">Titulo</label><br>
+        <input class="form-control" type="text" name="n1" id="n1" value="<?php echo $noticia->titulo ?? "" ;?>"><br>
 
-        <label for="">Materia</label><br>
-        <input type="text" name="n2" id="n2" value="<?php echo $noticia->materia ?? "" ;?>"><br>
+        <label class="form-label">Materia</label><br>
+        <textarea class="form-control" type="text" name="n2" id="n2"><?php echo $noticia->materia ?? "" ;?></textarea><br>
 
-        <label for="">Categoria</label><br>
-        <input type="password" name="n3" id="n3" value="<?php echo $noticia->categoria ?? "" ;?>"><br>
+        <label class="form-label">Categoria</label><br>
+        <input class="form-control" type="text" name="n3" id="n3" value="<?php echo $noticia->categoria ?? "" ;?>"><br>
 
-        <label for="">foto</label><br>
-        <input type="file" name="n4" id="n4" value="<?php echo $usuario->foto ?? "" ;?>"><br>
+        <label class="form-label">foto</label><br>
+        <input class="form-control" type="file" name="n4" id="n4" value="<?php echo $noticia->foto ?? "" ;?>"><br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" class="btn btn-success">Cadastrar</button>
     </form>
-</body>
-</html>
+</div>
+
+    <?php require_once "../template/rodape.php"; ?>
