@@ -54,7 +54,5 @@ echo $variavel[$i] . "<br>";
  //vetor de notas
  $notas = array(5,6,8);
  //como calcular a média de notas do vetor?
- $media = .....
  //imprimir a média
- echo $media
  ?>
