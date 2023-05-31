@@ -1,9 +1,13 @@
 <?php 
 include_once  "../noticia/consultar_todos.php";
 include_once  "../template/cabeçalho.php";
+include_once  "../template/menu.php";
+
+
 //include_once "menu.php";
 ?>
 
+  <!-- noticias -->
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-3">
 
@@ -23,4 +27,5 @@ include_once  "../template/cabeçalho.php";
 
   </div>
 
+<!-- fim noticias -->
 <?php include_once  "../template/rodape.php"?>

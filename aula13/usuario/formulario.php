@@ -1,13 +1,14 @@
 <?php
     require_once "consultar_por_id.php";
     require_once "../template/cabeçalho.php";
+    require_once "../template/menu_restrito.php";
 ?>
 
 <div class="container">
 
    <h1>Cadastro de Usuario</h1>
     <hr>
-    <form action="<?php echo isset($usuario) ? "atualizar.php" : "usuario/inserir.php"; ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo isset($usuario) ? "atualizar.php" : "inserir.php"; ?>" method="post" enctype="multipart/form-data">
     
         <input type="hidden" name="idusuario" id="n1" value="<?php echo $usuario->idusuario ?? "" ;?>"><br>  
 
