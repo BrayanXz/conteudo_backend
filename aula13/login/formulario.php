@@ -1,4 +1,5 @@
 <?php
+    require_once "../login/validar.php";
     require_once "../template/cabeçalho.php";
     require_once "../template/menu_restrito.php";
 ?>
@@ -7,14 +8,20 @@
 
    <h1>Area Restira</h1>
     <hr>
-    <form action="validar.php" method="post" enctype="multipart/form-data">
+    <?php if(isset($erro_login)): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?php echo $erro_login; ?>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<?php endif; ?>
+    <form action="formulario.php" method="post" enctype="multipart/form-data">
 
         <label class="form-label" for="">Login</label><br>
-        <input class="form-control" type="text" name="n2" id="n2"
+        <input class="form-control" type="text" name="login" id="login"
         ><br>
 
         <label class="form-label" for="">Senha</label><br>
-        <input class="form-control" type="password" name="n3" id="n3"><br>
+        <input class="form-control" type="password" name="senha" id="senha"><br>
 
         <button type="submit">Entrar</button>
     </form>

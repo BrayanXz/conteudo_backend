@@ -1,4 +1,5 @@
 <?php
+require_once "../login/controlar_acesso.php";
 require_once "../banco/conexao.php";
 
 if(isset($_POST["n1"]) && isset($_POST["n2"]) && isset($_POST["n3"])){

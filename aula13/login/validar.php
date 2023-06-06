@@ -2,9 +2,9 @@
 //importa o arquivo de conexão 
 require_once "../banco/conexao.php";
 
-if(isset($_POST['login']) and isset($_POST['senha'])) 
-  echo $login = $_POST['login'];
-  echo $senha = $_POST['senha'];
+if(isset($_POST['login']) and isset($_POST['senha'])) {
+   $login = $_POST['login'];
+   $senha = $_POST['senha'];
   
 //cria uma variavel com um comando sql
 $SQL = "SELECT * FROM `usuario` WHERE  `login`= ?;"; 
@@ -24,12 +24,16 @@ $resultado = $comando->get_result();
 //pega a primeira linha do resultado da consulta
 $usuario = $resultado->fetch_object();
 
-if($usuario != NULL and password_verify($senha, $usuario->senha)){
-   
+if($usuario !=null){
+  if(password_verify($senha, $usuario->senha)){
     session_start();
-    $_SESSION['usuario'] = $usuario->nome
+    $_SESSION['usuario'] = $usuario->nome;
     header("Location: ../noticia/index.php");
+}else{
+  $erro_login = "Senha incorreta!";
 }
-
-    header("Location: formulario.php");
+}else{
+  $erro_login = "Não existe usuario com esse login!";
+}
+}
 ?>
