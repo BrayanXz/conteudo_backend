@@ -9,7 +9,7 @@ $polo = $_POST["n3"];
 $formacao = $_POST["n4"];
 $tipo = $_POST["n5"];
 
-$sql = "INSERT INTO `tutor` (`nome`, `sexo`, `polo`, `formacao`, `tipo`, ) VALUES (?, ?, ?, ?, ?);";
+$sql = "INSERT INTO `tutor` (`nome`, `sexo`, `polo`, `formacao`, `tipo`) VALUES (?, ?, ?, ?, ?);";
 
 echo $sql;
 

@@ -1,7 +1,7 @@
 <?php
-require_once "../conexao.php";
+require_once "../banco/conexao.php";
 
-$id = $_POST["n6"];
+$id = $_POST["idtutor"];
 $nome = $_POST["n1"];
 $sexo = $_POST["n2"];
 $polo = $_POST["n3"];
