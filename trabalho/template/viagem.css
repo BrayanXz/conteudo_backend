@@ -1,0 +1,42 @@
+body,html{
+	height: 100%;
+	margin: 0;
+}
+.bg{
+	background-image: url("ps2.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+a.cor{
+	color: black;
+}
+a.cor:visited{
+	color: black;
+}
+.hr{
+	border-color: red; 
+}
+button{
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 30px;
+  position: absolute; 
+}
+
+.hidden{
+  display:none;
+}
+
+#move{
+  left: 200px;
+}
+
+#change:hover{
+  cursor:pointer;
+}
+p{
+	font-size: 100px;
+}
