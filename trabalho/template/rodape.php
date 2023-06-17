@@ -7,7 +7,7 @@
 </script>
 <hr>
 <footer class="bg-dark p-3 text-white text=center">
-  Meu site de notícias @ 2023
+  Cadastro de tutores @ 2023
     </footer>
   </body>
 </html>
