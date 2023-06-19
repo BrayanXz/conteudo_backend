@@ -11,5 +11,5 @@ $comando->execute();
 $resultado = $comando->get_result();
 
 $formacoes = [];
-while ($tutot = $resultado->fetch_object()){
+while ($tutor = $resultado->fetch_object()){
     $formacoes [] = $tutor; }
