@@ -2,7 +2,7 @@
 require_once "../banco/conexao.php";
 
 
-$sql = "SELECT distinct formação FROM tutor"; 
+$sql = "SELECT distinct formacao FROM tutor"; 
 
 $comando = $conexao->prepare($sql);
 
